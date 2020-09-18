@@ -1,0 +1,51 @@
+<head>
+    <meta charset="UTF-8">
+    <title>DELETE</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="Script.js"></script>
+    <link href="api.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="https://seanapitest.000webhostapp.com/index.html"><img src="home.png" href="#"></a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="https://seanapitest.000webhostapp.com/get.html">GET</a></li>
+                    <li><a href="https://seanapitest.000webhostapp.com/post.html">POST</a></li>
+                    <li><a href="https://seanapitest.000webhostapp.com/put.html">PUT</a></li>
+                    <li><a href="https://seanapitest.000webhostapp.com/delete.html">DELETE</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+    <section class="home">
+    </section>
+    <div id = "deleteText">
+      
+    </div>
+
+<!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+</body>

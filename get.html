@@ -1,0 +1,79 @@
+<head>
+    <meta charset="UTF-8">
+    <title>GET</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="Script.js"></script>
+    <link href="api.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="https://seanapitest.000webhostapp.com/index.html"><img src="home.png" href="#"></a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="https://seanapitest.000webhostapp.com/get.html">GET</a></li>
+                    <li><a href="https://seanapitest.000webhostapp.com/post.html">POST</a></li>
+                    <li><a href="https://seanapitest.000webhostapp.com/put.html">PUT</a></li>
+                    <li><a href="https://seanapitest.000webhostapp.com/delete.html">DELETE</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+    <section class="weather">
+    </section>
+    <div id = "getText">
+        <h1 class="myH1">GET Requests</h1>
+        <h2 class="myH2">GET requests retrieve information from a server so a user can get up to date information
+            without having to reload a webpage, to see GET requests in action, see the examples below!
+        </h2>
+        <div class = "weatherGET">
+            <p class="myP"><b>Current Weather Forecasts:</b><br>
+            This is an example of a GET request to an API called OpenWeatherMap. To
+        see the full functionality this API has, see the documentation <a href="https://openweathermap.org/current" target="blank">here!</a></p>
+        <label for="city" class="center">Enter a City to see current weather <b>OR...</b><br></label>
+        <input id = "city" class="center">
+        <button id = "getWeather">Get Weather!</button>
+<div id = "showWeather" class="center"></div>
+<br>
+<label for="cityZIP" class="center">Enter a zip code to see current weather<br></label>
+<input id = "cityZIP" class="center">
+<button id = "getWeatherZIP">Get Weather!</button>
+<div id = "showWeatherZIP" class="center"></div>
+</div>
+<div class = "nasaGET">
+    <p class="myP"><b>Nasa Photo of the day:</b><br>
+    This is an API from NASA that returns information about a 
+photo of the day like the author name, URL of the photo in standard definition
+and high definition</p>
+    <label for="photoSD" class="center">Click here to see the photo of the day in standard definition!<br></label>
+    <button id = photoSD>SD Photo</button><br><br>
+    <label for="photoHD" class="center">Click here to see the photo of the day in high definition!<br></label>
+    <button id = photoHD>HD Photo</button><br>
+    <pic id = "showPhoto"></pic>
+    
+</div>
+</div>
+
+<!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+</body>
